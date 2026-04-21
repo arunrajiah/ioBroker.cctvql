@@ -4,11 +4,29 @@
     "version": "1.0.0",
     "titleLang": {
       "en": "cctvQL",
-      "de": "cctvQL"
+      "de": "cctvQL",
+      "ru": "cctvQL",
+      "pt": "cctvQL",
+      "nl": "cctvQL",
+      "fr": "cctvQL",
+      "it": "cctvQL",
+      "es": "cctvQL",
+      "pl": "cctvQL",
+      "uk": "cctvQL",
+      "zh-cn": "cctvQL"
     },
     "desc": {
       "en": "Natural-language CCTV queries, live events, and PTZ control across Frigate, Hikvision, Synology, Dahua, and more.",
-      "de": "Natürlichsprachliche CCTV-Abfragen, Live-Ereignisse und PTZ-Steuerung für Frigate, Hikvision, Synology, Dahua u.v.m."
+      "de": "Natürlichsprachliche CCTV-Abfragen, Live-Ereignisse und PTZ-Steuerung für Frigate, Hikvision, Synology, Dahua u.v.m.",
+      "ru": "Запросы к CCTV на естественном языке, живые события и управление PTZ для Frigate, Hikvision, Synology, Dahua и других.",
+      "pt": "Consultas CCTV em linguagem natural, eventos ao vivo e controlo PTZ para Frigate, Hikvision, Synology, Dahua e outros.",
+      "nl": "Natuurlijke taal CCTV-zoekopdrachten, live gebeurtenissen en PTZ-bediening voor Frigate, Hikvision, Synology, Dahua en meer.",
+      "fr": "Requêtes CCTV en langage naturel, événements en direct et contrôle PTZ pour Frigate, Hikvision, Synology, Dahua et plus.",
+      "it": "Query CCTV in linguaggio naturale, eventi live e controllo PTZ per Frigate, Hikvision, Synology, Dahua e altri.",
+      "es": "Consultas CCTV en lenguaje natural, eventos en vivo y control PTZ para Frigate, Hikvision, Synology, Dahua y más.",
+      "pl": "Zapytania CCTV w języku naturalnym, zdarzenia na żywo i sterowanie PTZ dla Frigate, Hikvision, Synology, Dahua i innych.",
+      "uk": "Запити до CCTV природною мовою, живі події та керування PTZ для Frigate, Hikvision, Synology, Dahua тощо.",
+      "zh-cn": "针对 Frigate、Hikvision、Synology、Dahua 等的自然语言 CCTV 查询、实时事件和 PTZ 控制。"
     },
     "authors": ["arunrajiah <arunrajiah@gmail.com>"],
     "keywords": ["cctv", "camera", "nvr", "frigate", "hikvision", "nlp", "surveillance"],
@@ -20,6 +38,7 @@
     "mode": "daemon",
     "type": "multimedia",
     "tier": 3,
+    "compact": false,
     "icon": "admin/cctvql.png",
     "extIcon": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/admin/cctvql.png",
     "readme": "https://github.com/arunrajiah/ioBroker.cctvql/blob/main/README.md",
@@ -32,7 +51,16 @@
     "news": {
       "1.0.0": {
         "en": "Initial release — natural-language queries, event polling, PTZ control",
-        "de": "Erstveröffentlichung — natürlichsprachliche Abfragen, Event-Polling, PTZ-Steuerung"
+        "de": "Erstveröffentlichung — natürlichsprachliche Abfragen, Event-Polling, PTZ-Steuerung",
+        "ru": "Первый выпуск — запросы на естественном языке, опрос событий, управление PTZ",
+        "pt": "Lançamento inicial — consultas em linguagem natural, polling de eventos, controlo PTZ",
+        "nl": "Eerste release — zoekopdrachten in natuurlijke taal, event-polling, PTZ-bediening",
+        "fr": "Version initiale — requêtes en langage naturel, interrogation d'événements, contrôle PTZ",
+        "it": "Prima versione — query in linguaggio naturale, polling eventi, controllo PTZ",
+        "es": "Versión inicial — consultas en lenguaje natural, sondeo de eventos, control PTZ",
+        "pl": "Pierwsze wydanie — zapytania w języku naturalnym, odpytywanie zdarzeń, sterowanie PTZ",
+        "uk": "Перший випуск — запити природною мовою, опитування подій, керування PTZ",
+        "zh-cn": "初始版本 — 自然语言查询、事件轮询、PTZ 控制"
       }
     }
   },
