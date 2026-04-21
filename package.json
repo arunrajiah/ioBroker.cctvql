@@ -37,6 +37,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
     "test:package": "mocha test/package --exit",
+    "test:integration": "mocha test/integration --exit",
     "lint": "eslint main.js",
     "release": "release-script"
   },
