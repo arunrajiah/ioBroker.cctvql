@@ -19,7 +19,9 @@ class Cctvql extends utils.Adapter {
 
     get headers() {
         const h = { 'Content-Type': 'application/json' };
-        if (this.config.apiKey) h['X-API-Key'] = this.config.apiKey;
+        if (this.config.apiKey) {
+            h['X-API-Key'] = this.config.apiKey;
+        }
         return h;
     }
 
@@ -35,8 +37,11 @@ class Cctvql extends utils.Adapter {
         const ok = await this.checkConnection();
         await this.setState('info.connection', ok, true);
 
-        if (ok) this.log.info(`cctvQL connected at ${this.baseUrl}`);
-        else this.log.warn(`cctvQL not reachable at ${this.baseUrl}`);
+        if (ok) {
+            this.log.info(`cctvQL connected at ${this.baseUrl}`);
+        } else {
+            this.log.warn(`cctvQL not reachable at ${this.baseUrl}`);
+        }
 
         const interval = (this.config.pollingInterval || 30) * 1000;
         this.pollTimer = this.setInterval(() => this.pollEvents(), interval);
@@ -71,7 +76,9 @@ class Cctvql extends utils.Adapter {
             const seen = new Set();
             for (const ev of events) {
                 const cam = ev.camera || ev.camera_id;
-                if (!cam || seen.has(cam)) continue;
+                if (!cam || seen.has(cam)) {
+                    continue;
+                }
                 seen.add(cam);
                 const id = `cameras.${cam.replace(/[^a-zA-Z0-9_]/g, '_')}`;
                 await this.setObjectNotExistsAsync(`${id}.lastEvent`, {
@@ -88,7 +95,9 @@ class Cctvql extends utils.Adapter {
     }
 
     async onStateChange(id, state) {
-        if (!state || state.ack) return;
+        if (!state || state.ack) {
+            return;
+        }
 
         if (id.endsWith('query.send') && state.val) {
             await this.sendQuery(state.val);
@@ -134,7 +143,9 @@ class Cctvql extends utils.Adapter {
 
     onUnload(callback) {
         try {
-            if (this.pollTimer) this.clearInterval(this.pollTimer);
+            if (this.pollTimer) {
+                this.clearInterval(this.pollTimer);
+            }
         } finally {
             callback();
         }
@@ -142,7 +153,7 @@ class Cctvql extends utils.Adapter {
 }
 
 if (require.main !== module) {
-    module.exports = (options) => new Cctvql(options);
+    module.exports = options => new Cctvql(options);
 } else {
     new Cctvql();
 }
