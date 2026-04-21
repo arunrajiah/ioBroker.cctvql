@@ -3,21 +3,21 @@
   "items": {
     "host": {
       "type": "text",
-      "label": "cctvQL Host",
-      "help": "Hostname or IP address of your cctvQL server",
+      "label": "cctvql_host",
+      "help": "cctvql_host_help",
       "placeholder": "localhost",
       "xs": 12, "sm": 12, "md": 6, "lg": 6, "xl": 6
     },
     "port": {
       "type": "number",
-      "label": "Port",
+      "label": "cctvql_port",
       "placeholder": "8000",
       "min": 1, "max": 65535,
       "xs": 12, "sm": 6, "md": 3, "lg": 3, "xl": 3
     },
     "protocol": {
       "type": "select",
-      "label": "Protocol",
+      "label": "cctvql_protocol",
       "options": [
         { "label": "HTTP", "value": "http" },
         { "label": "HTTPS", "value": "https" }
@@ -27,13 +27,13 @@
     },
     "apiKey": {
       "type": "password",
-      "label": "API Key (optional)",
-      "help": "Leave blank if authentication is disabled",
+      "label": "cctvql_apikey",
+      "help": "cctvql_apikey_help",
       "xs": 12, "sm": 12, "md": 6, "lg": 6, "xl": 6
     },
     "pollingInterval": {
       "type": "number",
-      "label": "Event Polling Interval (seconds)",
+      "label": "cctvql_polling",
       "min": 5, "max": 3600,
       "default": 30,
       "xs": 12, "sm": 12, "md": 6, "lg": 6, "xl": 6

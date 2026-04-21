@@ -1,0 +1,9 @@
+{
+  "cctvql_host": "Хост cctvQL",
+  "cctvql_host_help": "Ім'я хоста або IP-адреса сервера cctvQL",
+  "cctvql_port": "Порт",
+  "cctvql_protocol": "Протокол",
+  "cctvql_apikey": "Ключ API (необов'язково)",
+  "cctvql_apikey_help": "Залиште порожнім, якщо автентифікація вимкнена",
+  "cctvql_polling": "Інтервал опитування подій (секунди)"
+}

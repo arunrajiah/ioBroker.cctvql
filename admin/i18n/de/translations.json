@@ -1,0 +1,9 @@
+{
+  "cctvql_host": "cctvQL-Host",
+  "cctvql_host_help": "Hostname oder IP-Adresse des cctvQL-Servers",
+  "cctvql_port": "Port",
+  "cctvql_protocol": "Protokoll",
+  "cctvql_apikey": "API-Schlüssel (optional)",
+  "cctvql_apikey_help": "Leer lassen, wenn die Authentifizierung deaktiviert ist",
+  "cctvql_polling": "Ereignis-Abfrageintervall (Sekunden)"
+}

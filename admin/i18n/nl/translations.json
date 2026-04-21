@@ -1,0 +1,9 @@
+{
+  "cctvql_host": "cctvQL-host",
+  "cctvql_host_help": "Hostnaam of IP-adres van uw cctvQL-server",
+  "cctvql_port": "Poort",
+  "cctvql_protocol": "Protocol",
+  "cctvql_apikey": "API-sleutel (optioneel)",
+  "cctvql_apikey_help": "Laat leeg als authenticatie is uitgeschakeld",
+  "cctvql_polling": "Gebeurtenis polling-interval (seconden)"
+}
