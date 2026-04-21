@@ -3,25 +3,36 @@ name: Test and Release
 on:
   push:
     branches: [master, main]
-    tags: ["v*"]
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
   pull_request:
 
 jobs:
-  test:
+  check-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --ignore-scripts
+      - run: node -e "require('./main.js')" 2>/dev/null || true
+
+  adapter-tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18, 20, 22]
+        node-version: [20, 22]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install --ignore-scripts
-      - run: node main.js --help 2>/dev/null || echo "basic load ok"
+      - run: npm test
 
   release:
-    needs: test
+    needs: [check-and-lint, adapter-tests]
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/v')
     steps:

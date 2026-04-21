@@ -6,17 +6,6 @@ Ask questions like *"Were there any people at the front door last night?"* direc
 
 ---
 
-## Installation
-
-In ioBroker Admin: **Adapter → + → search `cctvql`**
-
-Or via CLI:
-```bash
-cd /opt/iobroker && npm install iobroker.cctvql
-```
-
----
-
 ## Prerequisites
 
 A running [cctvQL server](https://github.com/arunrajiah/cctvql):
@@ -82,6 +71,13 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ---
 
+## Changelog
+
+### 1.0.0 (2026-04-21)
+* Initial release — natural-language queries, event polling, PTZ control
+
+---
+
 ## License
 
-MIT — [arunrajiah/cctvql](https://github.com/arunrajiah/cctvql)
+MIT — [arunrajiah/ioBroker.cctvql](https://github.com/arunrajiah/ioBroker.cctvql)

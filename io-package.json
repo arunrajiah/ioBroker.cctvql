@@ -2,7 +2,6 @@
   "common": {
     "name": "cctvql",
     "version": "1.0.0",
-    "title": "cctvQL",
     "titleLang": {
       "en": "cctvQL",
       "de": "cctvQL"
@@ -13,22 +12,23 @@
     },
     "authors": ["arunrajiah <arunrajiah@gmail.com>"],
     "keywords": ["cctv", "camera", "nvr", "frigate", "hikvision", "nlp", "surveillance"],
-    "license": "MIT",
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
     "platform": "Javascript/Node.js",
     "mode": "daemon",
     "type": "multimedia",
+    "tier": 3,
     "icon": "admin/cctvql.png",
-    "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/arunrajiah/cctvql/main/integrations/ioBroker.cctvql/admin/cctvql.png",
-    "readme": "https://github.com/arunrajiah/cctvql/blob/main/integrations/ioBroker.cctvql/README.md",
+    "extIcon": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/admin/cctvql.png",
+    "readme": "https://github.com/arunrajiah/ioBroker.cctvql/blob/main/README.md",
     "loglevel": "info",
-    "allowInit": true,
     "connectionType": "local",
     "dataSource": "push",
-    "dependencies": [{ "js-controller": ">=5.0.0" }],
-    "globalDependencies": [],
+    "dependencies": [{ "js-controller": ">=6.0.11" }],
+    "globalDependencies": [{ "admin": ">=7.6.20" }],
     "adminUI": { "config": "json" },
-    "encryptedNative": ["apiKey"],
     "news": {
       "1.0.0": {
         "en": "Initial release — natural-language queries, event polling, PTZ control",
@@ -43,6 +43,8 @@
     "apiKey": "",
     "pollingInterval": 30
   },
+  "protectedNative": ["apiKey"],
+  "encryptedNative": ["apiKey"],
   "objects": [],
   "instanceObjects": [
     {
