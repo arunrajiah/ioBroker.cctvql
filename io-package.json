@@ -39,7 +39,7 @@
     "type": "multimedia",
     "tier": 3,
     "compact": false,
-    "icon": "admin/cctvql.png",
+    "icon": "cctvql.png",
     "extIcon": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/admin/cctvql.png",
     "readme": "https://github.com/arunrajiah/ioBroker.cctvql/blob/main/README.md",
     "loglevel": "info",
