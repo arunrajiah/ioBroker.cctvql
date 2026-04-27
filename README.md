@@ -73,6 +73,9 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ## Changelog
 
+### 1.0.1 (2026-04-27)
+* Add bluefox as npm collaborator
+
 ### 1.0.0 (2026-04-21)
 * Initial release — natural-language queries, event polling, PTZ control
 
