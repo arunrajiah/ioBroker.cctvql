@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "cctvql",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "titleLang": {
       "en": "cctvQL",
       "de": "cctvQL",
@@ -49,6 +49,19 @@
     "globalDependencies": [{ "admin": ">=7.6.20" }],
     "adminUI": { "config": "json" },
     "news": {
+      "1.0.1": {
+        "en": "Maintenance release — add bluefox as npm collaborator",
+        "de": "Wartungsversion — bluefox als npm-Mitarbeiter hinzufügen",
+        "ru": "Техническое обновление — добавление bluefox как npm-соавтора",
+        "pt": "Versão de manutenção — adicionar bluefox como colaborador npm",
+        "nl": "Onderhoudsrelease — bluefox toevoegen als npm-medewerker",
+        "fr": "Version de maintenance — ajout de bluefox comme collaborateur npm",
+        "it": "Versione di manutenzione — aggiunta di bluefox come collaboratore npm",
+        "es": "Versión de mantenimiento — agregar bluefox como colaborador npm",
+        "pl": "Wydanie serwisowe — dodanie bluefox jako współpracownika npm",
+        "uk": "Технічне оновлення — додавання bluefox як npm-співавтора",
+        "zh-cn": "维护版本 — 将 bluefox 添加为 npm 协作者"
+      },
       "1.0.0": {
         "en": "Initial release — natural-language queries, event polling, PTZ control",
         "de": "Erstveröffentlichung — natürlichsprachliche Abfragen, Event-Polling, PTZ-Steuerung",
