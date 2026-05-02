@@ -73,6 +73,9 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ## Changelog
 
+### **WORK IN PROGRESS**
+- (copilot) Adapter requires node.js >= 22 now
+
 ### 1.0.1 (2026-04-27)
 * Add bluefox as npm collaborator
 
