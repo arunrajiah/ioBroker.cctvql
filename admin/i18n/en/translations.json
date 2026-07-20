@@ -5,6 +5,5 @@
   "cctvql_protocol": "Protocol",
   "cctvql_apikey": "API Key (optional)",
   "cctvql_apikey_help": "Leave blank if authentication is disabled",
-  "cctvql_polling": "Event Polling Interval (seconds)",
-  "localhost": "localhost"
+  "cctvql_polling": "Event Polling Interval (seconds)"
 }

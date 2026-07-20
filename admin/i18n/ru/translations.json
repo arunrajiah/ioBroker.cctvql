@@ -5,6 +5,5 @@
   "cctvql_protocol": "Протокол",
   "cctvql_apikey": "Ключ API (необязательно)",
   "cctvql_apikey_help": "Оставьте пустым, если аутентификация отключена",
-  "cctvql_polling": "Интервал опроса событий (секунды)",
-  "localhost": "localhost"
+  "cctvql_polling": "Интервал опроса событий (секунды)"
 }

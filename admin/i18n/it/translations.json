@@ -5,6 +5,5 @@
   "cctvql_protocol": "Protocollo",
   "cctvql_apikey": "Chiave API (opzionale)",
   "cctvql_apikey_help": "Lasciare vuoto se l'autenticazione è disabilitata",
-  "cctvql_polling": "Intervallo di polling eventi (secondi)",
-  "localhost": "localhost"
+  "cctvql_polling": "Intervallo di polling eventi (secondi)"
 }

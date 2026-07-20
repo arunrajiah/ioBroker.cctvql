@@ -10,7 +10,7 @@
 
 ioBroker adapter for [cctvQL](https://github.com/arunrajiah/cctvql) — a natural-language query layer for CCTV systems.
 
-Ask questions like *"Were there any people at the front door last night?"* directly from ioBroker scripts and Blockly flows, fetch live detection events, and send PTZ commands — across Frigate, Hikvision, Synology, Dahua, Milestone, ONVIF, and more.
+Ask questions like *"Were there any people at the front door last night?"* directly from ioBroker scripts and Blockly flows, fetch live detection events across Frigate, Hikvision, Synology, Dahua, Milestone, ONVIF, and more.
 
 ---
 
@@ -81,6 +81,11 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ## Changelog
 
+### 1.0.5 (2026-07-20)
+* Remove spurious `localhost` key from all 11 i18n translation files
+* Align polling interval UI minimum to 15 s (matches code floor)
+* Remove PTZ claim from adapter descriptions and README intro
+
 ### 1.0.4 (2026-07-11)
 * Remove npm-token from deploy step to enable OIDC trusted publishing (E3019)
 * Add v1.0.3 and v1.0.4 entries to README changelog (E6029)
@@ -101,11 +106,10 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 * Add bluefox as npm collaborator
 
 ### 1.0.0 (2026-04-21)
-* Initial release — natural-language queries, event polling, PTZ control
+* Initial release — natural-language queries and event polling
 
 ---
 
-[Older changelogs can be found there](CHANGELOG_OLD.md)
 
 ## License
 
