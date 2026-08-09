@@ -4,6 +4,7 @@ const utils = require('@iobroker/adapter-core');
 const axios = require('axios');
 
 class Cctvql extends utils.Adapter {
+    /** @param {Record<string, unknown>} [options] */
     constructor(options) {
         super({ ...options, name: 'cctvql' });
         this.pollTimer = null;
@@ -18,7 +19,9 @@ class Cctvql extends utils.Adapter {
         return `${protocol || 'http'}://${host || 'localhost'}:${port || 8000}`;
     }
 
+    /** @returns {Record<string, string>} */
     get headers() {
+        /** @type {Record<string, string>} */
         const h = { 'Content-Type': 'application/json' };
         if (this.config.apiKey) {
             h['X-API-Key'] = this.config.apiKey;
@@ -93,7 +96,7 @@ class Cctvql extends utils.Adapter {
                 await this.setState(`${id}.lastEvent`, JSON.stringify(ev), true);
             }
         } catch (err) {
-            this.log.debug(`Event poll failed: ${err.message}`);
+            this.log.debug(`Event poll failed: ${err instanceof Error ? err.message : String(err)}`);
             await this.setState('info.connection', false, true);
         } finally {
             // Self-rescheduling setTimeout prevents overlapping poll cycles.
@@ -101,16 +104,21 @@ class Cctvql extends utils.Adapter {
         }
     }
 
+    /**
+     * @param {string} id
+     * @param {ioBroker.State | null | undefined} state
+     */
     async onStateChange(id, state) {
         if (!state || state.ack) {
             return;
         }
 
-        if (id.endsWith('query.send') && state.val) {
+        if (id.endsWith('query.send') && typeof state.val === 'string' && state.val) {
             await this.sendQuery(state.val);
         }
     }
 
+    /** @param {string} query */
     async sendQuery(query) {
         this.log.debug(`Query: ${query}`);
         try {
@@ -123,11 +131,13 @@ class Cctvql extends utils.Adapter {
             await this.setState('query.intent', data.intent || '', true);
             this.log.info(`cctvQL answer: ${data.answer}`);
         } catch (err) {
-            this.log.error(`Query failed: ${err.message}`);
-            await this.setState('query.answer', `Error: ${err.message}`, true);
+            const message = err instanceof Error ? err.message : String(err);
+            this.log.error(`Query failed: ${message}`);
+            await this.setState('query.answer', `Error: ${message}`, true);
         }
     }
 
+    /** @param {() => void} callback */
     onUnload(callback) {
         try {
             if (this.pollTimer) {
@@ -140,6 +150,7 @@ class Cctvql extends utils.Adapter {
 }
 
 if (require.main !== module) {
+    /** @param {Partial<ioBroker.AdapterOptions>} [options] */
     module.exports = options => new Cctvql(options);
 } else {
     new Cctvql();

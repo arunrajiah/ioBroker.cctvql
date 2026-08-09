@@ -39,6 +39,8 @@
     "test:package": "mocha test/package --exit",
     "test:integration": "mocha test/integration --exit",
     "lint": "eslint main.js",
+    "translate": "translate-adapter",
+    "type-check": "tsc --noEmit",
     "release": "release-script"
   },
   "dependencies": {
@@ -52,6 +54,9 @@
     "@alcalzone/release-script-plugin-manual-review": "^5.2.0",
     "@iobroker/adapter-dev": "^1.5.0",
     "@iobroker/eslint-config": "^2.3.4",
-    "@iobroker/testing": "^5.2.2"
+    "@iobroker/testing": "^5.2.2",
+    "@tsconfig/node22": "^22.0.2",
+    "@types/node": ">=22",
+    "typescript": "^5.6.3"
   }
 }
