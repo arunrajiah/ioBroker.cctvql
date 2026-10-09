@@ -1,3 +1,13 @@
 node_modules/
 *.log
 .commitinfo
+
+# Local AI assistant / OS / env files
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.mcp.json
+.DS_Store
+.env
+.env.*
+!.env.example
